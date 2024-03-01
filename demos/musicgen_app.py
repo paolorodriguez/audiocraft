@@ -270,13 +270,13 @@ def ui_full(launch_kwargs):
                                       "facebook/musicgen-stereo-small", "facebook/musicgen-stereo-medium",
                                       "facebook/musicgen-stereo-melody", "facebook/musicgen-stereo-large",
                                       "facebook/musicgen-stereo-melody-large"],
-                                     label="Model", value="facebook/musicgen-stereo-melody", interactive=True)
+                                     label="Model", value="facebook/musicgen-stereo-large", interactive=True)
                     model_path = gr.Text(label="Model Path (custom models)")
                 with gr.Row():
                     decoder = gr.Radio(["Default", "MultiBand_Diffusion"],
                                        label="Decoder", value="Default", interactive=True)
                 with gr.Row():
-                    duration = gr.Slider(minimum=1, maximum=120, value=10, label="Duration", interactive=True)
+                    duration = gr.Slider(minimum=1, maximum=600, value=600, label="Duration", interactive=True)
                 with gr.Row():
                     topk = gr.Number(label="Top-k", value=250, interactive=True)
                     topp = gr.Number(label="Top-p", value=0, interactive=True)
